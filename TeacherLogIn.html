@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect  Log-In</title>
+    <link rel="stylesheet" href="/Connect/css/styles1.css">
+    <script>
+        function displayErrorMessage(){
+            const urlParams= new URLSearchParams(window.location.search);
+            if(urlParams.has('error') && urlParams.get('error')=='invalid'){
+                const errorDiv=document.getElementById('error');
+                errorDiv.textContent="Invalid Username or Password..."
+                errorDiv.style.display="block"
+                errorDiv.style.color="red";
+            }
+        }
+    </script>
+</head>
+<body onload="displayErrorMessage()">
+    <header>
+        <img src="/Connect/images/Connect.png" id="Header-Logo">
+    </header>
+
+    <br>
+    <br>
+    <center>
+        <div id="error" style="display: none;"></div>
+    <div id="Container">
+        <center>
+        <h1>Connect | Teacher Log-In</h1>
+        <hr>
+                <form  action="/Connect/check" method="post">
+                    <table>
+                        <tr>
+                            <td><label>Username  :</label></td>
+                            <td><input type="text" class="styled-textbox" size="20" name="UName" placeholder="Enter Username..."></td>
+                        </tr>
+                        <tr>
+                            <td><label>Password  :</label></td>
+                            <td><input type="password" class="styled-textbox" name="PWord" size="20" value=""></td>
+                        </tr>
+                    </table>
+                    <input type="hidden" name="designation" value="Teacher">
+                    <div class="bn">
+                        <input type="submit" class="Button" value="Log-In">
+                        <input type="reset" class="Button" value="Reset">
+                    </div>
+                    
+                </form>
+        </center>
+                <center>
+                    <a href="forgotpassword">Forgot Password ??</a>
+                    Don't have an account ?<a href="/Connect/SignUp.html">Register</a>
+                </center>
+    </div>
+    </center>
+</body>
+</html>

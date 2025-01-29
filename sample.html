@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect | Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<div>
+    <header>
+        <div class="logo">
+            <img src="/Connect/images/Connect.png" id="Header-Logo">
+        </div>
+        <nav id="navbar">
+            <li class="navli"><a href="/Connect/Profile">My Profile</a></li>
+            <li class="navli"><a href="/Connect/AllProfiles.jsp">All Profiles</a></li>
+            <button class="bn"><a href="#">Log Out</a></button>
+        </nav>
+    </header>
+
+    <div class="leftrightContainer">
+        <div class="leftPannel">
+            <div class="search-bar-container">
+                <input type="text" class="search-bar-input" placeholder="Search...">
+                <button class="material-icons" style="border-radius: 50%; background-color: inherit; ">search</button> <!-- Search Icon -->
+                <button class="material-icons" style="border-radius: 50%; background-color: inherit; ">refresh</button> <!-- Refresh Icon -->
+            </div>
+
+            
+            <ul id="userItems">
+                <!-- User list will be dynamically populated here -->
+                 <li>Mama Kutty</li>
+                 <li>Mama Kutty</li>
+                 <li>Mama Kutty</li>
+            </ul>
+        </div>
+
+        <div class="rightPannel">
+            <div id="msgProfile">
+                <Label class="Name" id="chatWith">Select a user</Label>
+            </div>
+            <div id="chatMessages"></div>
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Type a message..." />
+                <button class="bn" style="width:125px; height: 25px;" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        #chatMessages {
+            max-height: 400px;
+            overflow-y: auto;
+            padding: 10px;
+            background-color: #f1f1f1;
+        }
+
+        .my-message {
+            text-align: right;
+            background-color: #d1ffd1;
+            padding: 8px;
+            margin: 5px;
+            border-radius: 10px;
+        }
+
+        .their-message {
+            text-align: left;
+            background-color: #ffffff;
+            padding: 8px;
+            margin: 5px;
+            border-radius: 10px;
+        }
+    </style>
+</body>
+</html>

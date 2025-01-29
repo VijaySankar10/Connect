@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect  Log-In</title>
+    <link rel="stylesheet" href="/Connect/css/styles1.css">
+    <script>
+        displayErrorMessage(){
+            const urlParams= new URLSearchParams(window.location.search);
+            if(urlParams.has('error') && urlParams.get('error')=='invalid'){
+                const errorDiv=document.getElementById('error');
+                errorDiv.textContent="Username Already exist..."
+                errorDiv.style.display="block"
+                errorDiv.style.color="red";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="/Connect/images/Connect.png" id="Header-Logo">
+    </header>
+
+    <br>
+    <br>
+    <center>
+        <div id="error" style="display: none;"></div>
+    <div id="Container">
+        <center>
+        <h1>Connect | Sign-Up</h1>
+        <hr>
+                <form  action="/Connect/AddAccount" method="post">
+
+                    <table>
+                        <tr>
+                            <td><label>Choose Account Type:</label></td>
+                            <td> 
+                                <select class="styled-textbox" name="designation">
+                                <option value="Student">Student</option>
+                                <option value="Teacher">Teacher</option>
+                                <option value="Admin">Admin</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Mail Id  :</label></td>
+                            <td><input type="email" class="styled-textbox" size="20" name="Email" placeholder="Enter Mail Id..."></td>
+                        </tr>
+                        <tr>
+                            <td><label>Username  :</label></td>
+                            <td><input type="text" class="styled-textbox" size="20" name="UName" placeholder="Enter Username..."></td>
+                        </tr>
+                        <tr>
+                            <td><label>Password  :</label></td>
+                            <td><input type="password" class="styled-textbox" name="PWord" size="20" value=""></td>
+                        </tr>
+                    </table>
+                    <input type="hidden" name="designation" value="Admin">
+                    <div class="bn">
+                        <input type="submit" class="Button" value="Sign-Up">
+                        <input type="reset" class="Button" value="Reset">
+                    </div>
+                    
+                </form>
+        </center>
+                <center>
+                    <a href="forgotpassword">Forgot Password ??</a>
+                    Already Have an Account ?<a href="/Connect/LogIn.html">Log-In</a>
+                </center>
+    </div>
+    </center>
+</body>
+</html>
