@@ -1,0 +1,379 @@
+html{
+    overflow: hidden;
+}
+body {
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("/Connect/images/background.jpg");
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+}
+
+a{
+    text-decoration: none;
+}
+
+#Header-Logo{
+    width: 250px;
+    height: 50px;
+}
+
+header {
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Style for the header text */
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#container {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.leftrightContainer{
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    width: 1070px;
+}
+
+
+.content1 {
+    width: 200px;
+    height: 250px;
+    border-radius: 15px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    gap:10px;
+}
+
+
+.content1:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.content1 h1 {
+    margin: 0;
+    font-size: 1.2em;
+    color: black;
+}
+
+.content-image{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+.search-bar-container{
+    background-color: white;
+    padding: 1px;
+    display: flex;
+    border-radius: 25px;
+    border-color: #000;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease,background-color 0.2s ease;
+}
+
+.search-bar-container:hover{
+    transform: scale(1.01);
+}
+
+.material-icons{
+    transition: transform 0.2s ease;
+    border: none;
+    border-radius: 50%;
+    background-color: inherit;
+    padding-right: 15px;
+}
+
+.material-icons:hover{
+    transform: scale(1.01);
+}
+
+.search-bar-input{
+    border: none;
+    border-radius: 25px;
+    flex: 80%;
+    width: 250px;
+    height: 40px;
+    padding-left: 25px;
+}
+
+.refresh-btn{
+    font-size: 10px;
+    padding-right: 15px;
+    flex: 10%;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.search-btn{
+    font-size: 10px;
+    flex: 10%;
+    height: 40px;
+    width: 40px;
+    border-color: none;
+    border-radius: 50%;
+    padding-right: 45px;
+}
+
+
+.logo{
+    flex:30%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border-color: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    transition: color 0.4s ease;
+}
+
+.navli{
+    list-style-type: none;
+    padding: 10px;
+    margin: 10px;
+}
+
+a:hover{
+    color: gray;
+}
+
+#navbar{
+    flex: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 10px;
+    background-color: black;
+    color:white;
+}
+
+.leftPannel{
+    background-color: gray;
+    padding: 5px;
+    margin: 5px;
+    flex:30%;
+    overflow:scroll;
+    height: 380px;
+    gap: 5px;
+    align-items: center;
+    width: 100%; /* Ensure it fills its container */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+.rightPannel{
+    width: 600px;
+    height: 380px;
+    background-color: #ffffff;
+    margin: 5px;
+    padding: 5px;
+    flex: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.bn{
+    background-color: gray;
+    color: black;
+    height: 25px;
+    width: 100px;
+    border-radius: 50px;
+    font-size: 15px;
+    transition: background-color 0.4s ease;
+}
+
+.bn a{
+    color: inherit;
+    transition: color 0.4s ease;
+}
+
+.bn a:hover{
+    color: inherit;
+}
+
+.bn:hover{
+    background-color:#181818;
+    color:white
+}
+
+.NameList{
+    color:black;
+    font-family: monospace;
+    font-size: 24px;
+    font-style: bold;
+    box-shadow: inset;
+    padding: 5px;
+}
+
+li{
+    list-style-type: none;
+    padding: 10px;
+}
+
+#msgProfile{
+    background-color: black;
+    padding-left: 5%;
+    width:100%;
+    flex:10%;
+}
+
+.Name{
+    color: white;
+    font-family: monospace;
+    font-size: 24px;
+}
+
+.Messages{
+    max-width: 200px;
+    border-color: #000;
+    border-radius: 50px;
+    color:#000;
+    padding: 10px;
+    overflow:auto;
+}
+
+#sendMessages{
+    flex:10%;
+    display: flex;
+    flex-direction: row;
+}
+
+#chatMessages {
+    padding: 10px;
+    row-gap: 10px;
+    column-gap: 10px;
+    overflow-y: scroll;
+    flex: 75%;
+}
+
+.chat-input {
+    background-color: white;
+    padding: 1px;
+    display: flex;
+    border-radius: 25px;
+    border-color: #000;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease,background-color 0.2s ease;
+}
+
+.chat-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.user-list{
+    width: 100%;
+    background-color: inherit;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #000;
+    padding: 10px;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    transition: background-color 0.3s;
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.user-list:hover{
+    background-color: rgb(45, 45, 45);
+}
+
+.user-list span {
+    flex-grow: 1; /* Make name text expand to fill width */
+}
+
+.userItems{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+     padding: 0 !important;  /* Remove extra padding */
+    margin: 0 !important;
+    list-style: none;
+}
+
+.user-profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.user-profile-pic {
+    width: 40px;  /* Set a fixed width */
+    height: 40px; /* Set a fixed height */
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Ensure it crops properly */
+}
+
+.chat-user-pic {
+    width: 30px;  /* Adjust chat profile picture size */
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chat-header-pic {
+    width: 45px; /* Adjust size as needed */
+    height: 45px;
+    border-radius: 50%; /* Make it circular */
+    margin-right: 20px;
+    vertical-align: middle;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+@media screen and(max-width:480px) {
+    #chatMessages {
+        height:100vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}

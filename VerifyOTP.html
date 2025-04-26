@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mail Verification</title>
+    <link rel="stylesheet" href="/Connect/css/styles1.css">
+    <link rel="icon" type="image/png" href="/Connect/images/ConnectProfile.png">
+    <script>
+        function displayErrorMessage(){
+            const urlParams= new URLSearchParams(window.location.search);
+            if(urlParams.has('error') && urlParams.get('error')=='invalid'){
+                const errorDiv=document.getElementById('error');
+                errorDiv.textContent="Invalid OTP..."
+                errorDiv.style.display="block"
+                errorDiv.style.color="red";
+            }
+        }
+    </script>
+</head>
+<body onload="displayErrorMessage()">
+    <header>
+        <img src="/Connect/images/Connect.png" id="Header-Logo">
+    </header>
+    <br>
+    <br>
+    <center><h2>Enter The OTP Sent to Your Mail Id...</h2>
+    <br>
+    <div id="error" style="display: none;"></div>
+    <br>
+
+    <form action="/Connect/OTPVerify" method="post">
+        <label for="otp">OTP:</label>
+        <input type="text" class="styled-textbox" name="otp" required>
+        <br><br>
+        <input type="submit" class="Button" value="Verify">
+    </form>
+</center>
+</body>
+</html>

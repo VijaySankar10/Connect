@@ -1,0 +1,97 @@
+body{
+    align-items: center;
+    justify-content: center;
+    background-image: url("/Connect/images/background.jpg");
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+}
+
+#Header-Logo{
+    width: 200px;
+    height: 40px;
+}
+
+#navbar{
+    flex: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 10px;
+    background-color: black;
+    color:white;
+}
+
+.navli{
+    list-style-type: none;
+    padding: 10px;
+    margin: 10px;
+}
+
+header {
+    background-color: black; 
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+#Container{
+    padding: 10px;
+    width: 30%;
+    height: 20%;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(3px);
+    border: 2px solid black;
+    border-radius: 10%;
+    box-shadow: rgba(49, 48, 48, 0.2);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#Container h1{
+    font-style: bold;
+    color:black;
+}
+
+.Button{
+    background-color: black;
+    color: wheat;
+    height: 25px;
+    width: 100px;
+    border-radius: 50px;
+    font-size: 15px;
+}
+label{
+    font-size: 24px;
+    color: black;
+}
+.styled-textbox {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #4CAF50;
+    border-radius: 50px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+td{
+    padding: 30px;
+}
+.bn{
+    display: flex;
+    padding: 25px;
+    justify-content: center;
+    gap: 20px;;
+}
+.Button:hover{
+    background-color: grey;
+    color: white;
+    transition-duration: .5s;
+}
+.content-image{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}

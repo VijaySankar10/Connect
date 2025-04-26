@@ -1,0 +1,108 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="3.0">
+<display-name>Connect</display-name>
+
+    <!-- Servlet for Adding an Account -->
+    <servlet>
+        <servlet-name>AddAccount</servlet-name>
+        <servlet-class>AddAccount</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddAccount</servlet-name>
+        <url-pattern>/AddAccount</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet for Checking Credentials -->
+    <servlet>
+        <servlet-name>check</servlet-name>
+        <servlet-class>check</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>check</servlet-name>
+        <url-pattern>/check</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet for OTP Verification -->
+    <servlet>
+        <servlet-name>VerifyOTP</servlet-name>
+        <servlet-class>VerifyOTP</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VerifyOTP</servlet-name>
+        <url-pattern>/VerifyOTP</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet for OTPVerify -->
+    <servlet>
+        <servlet-name>OTPVerify</servlet-name>
+        <servlet-class>OTPVerify</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OTPVerify</servlet-name>
+        <url-pattern>/OTPVerify</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet for Profile -->
+    <servlet>
+        <servlet-name>Profile</servlet-name>
+        <servlet-class>Profile</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Profile</servlet-name>
+        <url-pattern>/Profile</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet for Updating Profile Picture -->
+    <servlet>
+        <servlet-name>UpdateProfilePicture</servlet-name>
+        <servlet-class>UpdateProfilePicture</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateProfilePicture</servlet-name>
+        <url-pattern>/UpdateProfilePicture</url-pattern>
+    </servlet-mapping>
+
+    <!-- WebSocket Chat Server -->
+    <servlet>
+        <servlet-name>ChatServer</servlet-name>
+        <servlet-class>ChatServer</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ChatServer</servlet-name>
+        <url-pattern>/chat</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ImageServlet</servlet-name>
+        <servlet-class>ImageServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ImageServlet</servlet-name>
+        <url-pattern>/GetProfileImage</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>Logout</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/Logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ForgotPasswordServlet</servlet-name>
+        <servlet-class>ForgotPasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ForgotPasswordServlet</servlet-name>
+        <url-pattern>/ForgotPasswordServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Welcome Files -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>

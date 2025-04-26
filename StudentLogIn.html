@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect  Log-In</title>
+    <link rel="icon" type="image/png" href="/Connect/images/ConnectProfile.png">
+    <link rel="stylesheet" href="/Connect/css/styles1.css">
+    <script>
+        function displayErrorMessage(){
+            const urlParams= new URLSearchParams(window.location.search);
+            if(urlParams.has('error') && urlParams.get('error')=='invalid'){
+                const errorDiv=document.getElementById('error');
+                errorDiv.textContent="Invalid Username or Password..."
+                errorDiv.style.display="block"
+                errorDiv.style.color="red";
+            }
+        }
+    </script>
+</head>
+<body onload="displayErrorMessage()">
+
+    <br>
+    <br>
+    <center>
+        <div id="error" style="display: none;"></div>
+    <div id="Container">
+        <center>
+        <h1 style="font-size: 25px; border-bottom: 1px solid black; width:fit-content">Connect | Student Log-In</h1>
+                <form  action="/Connect/check" method="post">
+                    <table>
+                        <tr>                            
+                            <td><input type="text" class="styled-textbox" size="20" name="UName" placeholder="Enter Username..."></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div style="position: relative;">
+                                    <input type="password" class="styled-textbox" id="password" name="PWord" size="20" placeholder="Enter Password...">
+                                    <span onclick="togglePassword()" 
+                                        style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; font-size: 14px;">
+                                        👁️
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <input type="hidden" name="designation" value="Student">
+                    <div class="bn">
+                        <input type="submit" class="Button" value="Log-In">
+                        <input type="reset" class="Button" value="Reset">
+                    </div>
+                    
+                </form>
+        </center>
+                <center>
+                    <a href="/Connect/forgotPassword.html">Forgot Password ??</a>
+                    Don't have an account ?<a href="/Connect/SignUp.html">Register</a>
+                </center>
+    </div>
+    </center>
+    <script>
+        function togglePassword() {
+            const passwordField = document.getElementById("password");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
+    </script>    
+</body>
+</html>
